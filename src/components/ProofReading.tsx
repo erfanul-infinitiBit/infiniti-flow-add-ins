@@ -70,11 +70,11 @@ const ProofReading: React.FC<ProofReadingProps> = ({ onBack }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-4 space-y-4">
+    <div className="bg-white rounded-lg shadow-lg p-4 space-y-4 h-[calc(100vh-7rem)] flex flex-col">
       <TitleBar title="Proof Reading" onBack={onBack} />
       
       {suggestions.length === 0 ? (
-        <div className="text-center py-8">
+        <div className="text-center py-8 flex-1 flex flex-col justify-center">
           <CheckSquare size={48} className="mx-auto text-[#2b579a] mb-4" />
           <p className="text-gray-600 mb-4">
             Check your document for grammar, spelling, and style improvements.
@@ -88,7 +88,7 @@ const ProofReading: React.FC<ProofReadingProps> = ({ onBack }) => {
           </button>
         </div>
       ) : (
-        <div className="space-y-4">
+        <div className="space-y-4 flex-1 overflow-y-auto">
           <h3 className="font-medium text-gray-700">Suggestions</h3>
           <div className="space-y-3">
             {suggestions.map((suggestion, index) => (
@@ -100,7 +100,6 @@ const ProofReading: React.FC<ProofReadingProps> = ({ onBack }) => {
                   <AlertCircle size={20} className="text-orange-500 mt-1 flex-shrink-0" />
                   <div>
                     <p className="text-gray-700 font-medium">{suggestion.text}</p>
-                    <p className="text-gray-600 mt-1">{suggestion.explanation}</p>
                     <p className="text-green-600 mt-2">
                       Suggestion: {suggestion.suggestion}
                     </p>

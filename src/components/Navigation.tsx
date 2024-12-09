@@ -10,7 +10,7 @@ const Navigation: React.FC<NavigationProps> = ({ onNavigate, showBack }) => {
   const menuItems = [
     { id: 'chat', label: 'Chat Assistant', icon: MessageSquare },
     { id: 'ai-edit', label: 'AI Edit', icon: Edit3 },
-    { id: 'refinement', label: 'Document Refinement', icon: FileText },
+    // { id: 'refinement', label: 'Document Refinement', icon: FileText },
     { id: 'proofreading', label: 'Proof Reading', icon: CheckSquare },
   ];
 

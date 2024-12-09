@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Bold, Italic, Underline } from 'lucide-react';
 import Navigation from './components/Navigation';
 import ChatBot from './components/ChatBot';
 import AIEdit from './components/AIEdit';
@@ -76,8 +75,8 @@ function App() {
         return <ChatBot documentText={documentText} onBack={() => setCurrentPage('home')} />;
       case 'ai-edit':
         return <AIEdit onBack={() => setCurrentPage('home')} />;
-      case 'refinement':
-        return <DocumentRefinement onBack={() => setCurrentPage('home')} />;
+      // case 'refinement':
+      //   return <DocumentRefinement onBack={() => setCurrentPage('home')} />;
       case 'proofreading':
         return <ProofReading onBack={() => setCurrentPage('home')} />;
       default:
@@ -94,31 +93,8 @@ function App() {
   }
 
   return (
-    <div className="p-4 h-screen flex flex-col space-y-4">
-      {currentPage !== 'home' && (
-        <div className="flex space-x-2">
-          <button
-            onClick={makeTextBold}
-            className="p-2 bg-[#2b579a] text-white rounded hover:bg-[#1e3f6f]"
-          >
-            <Bold size={20} />
-          </button>
-          <button
-            onClick={makeTextItalic}
-            className="p-2 bg-[#2b579a] text-white rounded hover:bg-[#1e3f6f]"
-          >
-            <Italic size={20} />
-          </button>
-          <button
-            onClick={makeTextUnderline}
-            className="p-2 bg-[#2b579a] text-white rounded hover:bg-[#1e3f6f]"
-          >
-            <Underline size={20} />
-          </button>
-        </div>
-      )}
-      
-      <div className="flex-1">
+    <div className="p-4 h-screen bg-white">
+      <div className="w-full">
         <Navigation 
           onNavigate={setCurrentPage} 
           showBack={currentPage !== 'home'} 

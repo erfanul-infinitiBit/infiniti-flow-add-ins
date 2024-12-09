@@ -9,7 +9,7 @@ const certPath = path.join(process.env.USERPROFILE, '.office-addin-dev-certs');
 export default defineConfig({
   plugins: [react()],
   server: {
-    port: 5173,
+    port: 5175,
     https: {
       key: fs.readFileSync(path.join(certPath, 'localhost.key')),
       cert: fs.readFileSync(path.join(certPath, 'localhost.crt')),

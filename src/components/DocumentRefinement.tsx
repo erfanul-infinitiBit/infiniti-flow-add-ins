@@ -14,7 +14,7 @@ const DocumentRefinement: React.FC<DocumentRefinementProps> = ({ onBack }) => {
     try {
       await Word.run(async (context) => {
         const body = context.document.body;
-        context.load(body, 'text');
+        context.load(body, 'text'); 
         await context.sync();
 
         const response = await fetch('https://api.openai.com/v1/chat/completions', {

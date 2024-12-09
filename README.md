@@ -145,7 +145,7 @@ export default defineConfig({
       key: fs.readFileSync('path/to/localhost.key'),
       cert: fs.readFileSync('path/to/localhost.crt'),
     },
-    port: 5173
+    port: 5175
   }
 });
 ```
@@ -159,7 +159,7 @@ VITE_SSL_CERT_PATH=path/to/localhost.crt
 ### Troubleshooting Certificate Issues
 
 1. Browser Warnings
-   - Open https://localhost:5173 directly in your browser
+   - Open https://localhost:5175 directly in your browser
    - Click "Advanced" and proceed to the site
    - Accept the self-signed certificate
 
