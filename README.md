@@ -29,8 +29,8 @@ InfinitiFlow is a sophisticated Microsoft Word Add-in that enhances your documen
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn
-- Microsoft Word (Desktop version)
 - SSL Certificate for development
+- Gulp for building the manifest file
 
 ### Installation
 
@@ -263,6 +263,11 @@ npm install --production
 yarn install --production
 ```
 
+Gulp installation:
+```
+npm install -g gulp-cli
+```
+
 ### Package Scripts
 
 ```json
@@ -289,6 +294,7 @@ yarn install --production
 - `npm run dev`: Start development server
 - `npm run build`: Build for production
 - `npm run preview`: Preview production build
+- `gulp package --ship`: Create zip package file with the manifest.xml 
 
 ### Environment Variables
 
